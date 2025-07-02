@@ -1,30 +1,77 @@
 body {
-  font-family: Arial;
   margin: 0;
   padding: 0;
-  background: #111;
-  color: white;
+  background: #f6f8fc;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.header h1 {
+  color: #5a57ff;
+  margin-top: 20px;
 }
 
 .controls {
-  padding: 20px;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+.controls select, .controls button, .controls input[type="range"] {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background: #222;
 }
 
 #array-container {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 500px;
+  height: 350px;
   margin: 20px auto;
-  width: 90%;
+  padding: 0 20px;
 }
 
 .bar {
-  background: #3498db;
+  background-color: #3b82f6;
   margin: 1px;
-  width: 5px;
+  width: 6px;
+  transition: height 0.3s ease;
 }
+
+.status {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #444;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.legend-item {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.legend-item.default { background-color: #3b82f6; }
+.legend-item.comparing { background-color: #facc15; }
+.legend-item.swapping { background-color: #ef4444; }
+.legend-item.current { background-color: #a855f7; }
+.legend-item.found { background-color: #22c55e; }
