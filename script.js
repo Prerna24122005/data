@@ -19,8 +19,9 @@ sizeSlider.oninput = () => {
 speedSlider.oninput = () => {
   const speedValue = speedSlider.value;
   speedLabel.textContent = `${speedValue}%`;
-  delay = 150 - speedValue;
+  delay = Math.floor(1000 - Math.pow(speedValue, 1.5)); // ✅ NEW
 };
+
 
 // Generate new array
 function generateArray() {
