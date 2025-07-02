@@ -12,6 +12,7 @@ body {
   margin-top: 20px;
 }
 
+/* --- Controls Container --- */
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -23,17 +24,14 @@ body {
   margin-bottom: 10px;
 }
 
-.controls select, .controls button, .controls input[type="range"] {
-  padding: 8px;
-  font-size: 14px;
-}
-
+/* --- Sliders Layout --- */
 .slider {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* --- Array Bar Container --- */
 #array-container {
   display: flex;
   align-items: flex-end;
@@ -45,6 +43,7 @@ body {
   padding: 0 20px;
 }
 
+/* --- Bars --- */
 .bar {
   background-color: #3b82f6;
   margin: 2px;
@@ -53,13 +52,14 @@ body {
   transition: height 0.3s ease, background-color 0.2s ease;
 }
 
-
+/* --- Status Message --- */
 .status {
   font-size: 16px;
   margin: 10px 0;
   color: #444;
 }
 
+/* --- Legend --- */
 .legend {
   display: flex;
   justify-content: center;
@@ -74,8 +74,54 @@ body {
   color: #fff;
 }
 
-.legend-item.default { background-color: #3b82f6; }
+.legend-item.default   { background-color: #3b82f6; }
 .legend-item.comparing { background-color: #facc15; }
-.legend-item.swapping { background-color: #ef4444; }
-.legend-item.current { background-color: #a855f7; }
-.legend-item.found { background-color: #22c55e; }
+.legend-item.swapping  { background-color: #ef4444; }
+.legend-item.current   { background-color: #a855f7; }
+.legend-item.found     { background-color: #22c55e; }
+
+
+button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1.5px solid #d1d5db;
+  background-color: #ffffff;
+  color: #111827;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #f3f4f6;
+  transform: scale(1.03);
+}
+
+#play {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+#play:hover {
+  background-color: #16a34a;
+  transform: scale(1.05);
+}
+
+select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #d1d5db;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  cursor: pointer;
+  transition: border 0.2s ease;
+}
+
+select:hover {
+  border-color: #6b7280;
+}
