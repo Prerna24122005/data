@@ -38,6 +38,8 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   height: 350px;
   margin: 20px auto;
   padding: 0 20px;
@@ -45,10 +47,12 @@ body {
 
 .bar {
   background-color: #3b82f6;
-  margin: 1px;
-  width: 6px;
-  transition: height 0.3s ease;
+  margin: 2px;
+  width: 15px;
+  border-radius: 6px 6px 0 0;
+  transition: height 0.3s ease, background-color 0.2s ease;
 }
+
 
 .status {
   font-size: 16px;
