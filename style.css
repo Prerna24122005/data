@@ -1,0 +1,30 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: white;
+}
+
+.controls {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #222;
+}
+
+#array-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 500px;
+  margin: 20px auto;
+  width: 90%;
+}
+
+.bar {
+  background: #3498db;
+  margin: 1px;
+  width: 5px;
+}
