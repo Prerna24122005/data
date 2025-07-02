@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sorting Visualizer</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSA Algorithm Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="header">
+    <h1>DSA Algorithm Visualizer</h1>
+  </div>
+
   <div class="controls">
-    <label>Algorithm:</label>
     <select id="algorithm">
       <option value="bubble">Bubble Sort</option>
       <option value="insertion">Insertion Sort</option>
@@ -16,17 +19,32 @@
       <option value="quick">Quick Sort</option>
     </select>
 
-    <label>Size:</label>
-    <input type="range" id="size" min="10" max="100" value="50"/>
+    <button id="play">▶ Play</button>
+    <button id="reset">🔁 Reset</button>
+    <button id="random">🎲 Random Array</button>
 
-    <label>Speed:</label>
-    <input type="range" id="speed" min="1" max="100" value="50"/>
+    <div class="slider">
+      <label>Array Size: <span id="size-label">50</span></label>
+      <input type="range" id="size" min="10" max="100" value="50" />
+    </div>
 
-    <button onclick="generateArray()">Generate Array</button>
-    <button onclick="startSort()">Sort</button>
+    <div class="slider">
+      <label>Speed: <span id="speed-label">100%</span></label>
+      <input type="range" id="speed" min="1" max="100" value="100" />
+    </div>
   </div>
 
   <div id="array-container"></div>
+
+  <p class="status">Ready to start visualization</p>
+
+  <div class="legend">
+    <span class="legend-item default">Default</span>
+    <span class="legend-item comparing">Comparing</span>
+    <span class="legend-item swapping">Swapping</span>
+    <span class="legend-item current">Current</span>
+    <span class="legend-item found">Found/Search Range</span>
+  </div>
 
   <script src="script.js"></script>
 </body>
